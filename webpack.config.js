@@ -1,10 +1,10 @@
 const webpack = require('webpack');
 
 module.exports = {
-  entry: [
-    'react-hot-loader/patch',
-    './src/index.js'
-  ],
+  entry: {
+    home:'./src/index.js',
+    lib:'./src/parser.js'
+ },
   module: {
     rules: [
       {
@@ -20,7 +20,7 @@ module.exports = {
   output: {
     path: __dirname + '/dist',
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: "[name].compiled.js"
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin()

@@ -1,21 +1,60 @@
-# minimal-react-webpack-babel-setup
+# 🙊 Text-emoji-parser
 
-[![Build Status](https://travis-ci.org/rwieruch/minimal-react-webpack-babel-setup.svg?branch=master)](https://travis-ci.org/rwieruch/minimal-react-webpack-babel-setup)
+# What does it do ? 
 
-Read more about it: [The Minimal React Webpack Babel Setup](https://www.robinwieruch.de/minimal-react-webpack-babel-setup/)
-
-## Features
-
-* React 16
-* Webpack 4
-* Babel
-* Staging ES Next Features
-* Hot Module Replacement
+  - Parse Text apply a set of rules(regex) and replace them or manipulate it to provide a new output as either text , html     or react node.
+  - Line by line parse or all at once
+  - Simple and lightweight library 
+  - Built for parsing text on messages and displaying emojis :)
 
 ## Installation
 
-* `git clone git@github.com:rwieruch/minimal-react-webpack-babel-setup.git`
-* cd minimal-react-webpack-babel-setup
-* npm install
-* npm start
-* visit `http://localhost:8080/`
+## Basic Usage
+
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {MultiLineParser} from './parser';
+import { Emoji } from 'emoji-mart' // you can use this or any other emoji library i recommend this though 
+const title = 'My Minimal React Webpack :santa::skin-tone-3: we :smiley: Babel Setup \n wowwwwww \n cool';
+
+let ParsedNode=MultiLineParser(title,
+                               {
+                                  SplitLinesTag:'p',
+                                  Rule:/(?:\:[^\:]+\:(?:\:skin-tone-(?:\d)\:)?)/gi
+                                },
+                                (Rule,ruleNumber)=>{
+                                        console.log(Rule)
+                                        return <Emoji emoji={Rule} size={48}/>
+                                });
+
+ReactDOM.render(
+  <div> {ParsedNode} </div>,
+  document.getElementById('app')
+);
+
+```
+## API 
+#### SimpleParser
+```javascript
+import {SimpleParser} from './parser';
+```
+* **Plaintext-required**: Plain text to parse
+* **Rule-required**: A regex that will match elements that you want to parse on the text (escape all capture groups)
+* **Render-required** (function): (MatchedText, ruleNumber) Provides the captured text from the given rule as an argument expects return as text or htm or react node 
+
+#### MultiLineParser
+```javascript
+import {MultiLineParser} from './parser';
+```
+* **Plaintext-required**: Plain text to parse
+* **Options-required**: ```{SplitLinesTag:'p',Rule:/(?:\:[^\:]+\:(?:\:skin-tone-(?:\d)\:)?)/gi}```
+* **Render-required** (function): (MatchedText, ruleNumber) Provides the captured text from the given rule as an argument expects return as text or htm or react node 
+
+
+### Tech
+* React
+
+
+### Created by :
+[Dasith Kuruppu](https://github.com/DasithKuruppu)

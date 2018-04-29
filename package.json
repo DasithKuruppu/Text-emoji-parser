@@ -1,7 +1,7 @@
 {
-  "name": "minimal-react-webpack-babel-setup",
+  "name": "text-emoji-parser",
   "version": "1.0.0",
-  "description": "",
+  "description": "Generic text parser for emoji of all kinds :) plug in your own emoji library to parse",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js --mode development",
@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "babel-preset-env": "^1.6.1",
+    "emoji-mart": "^2.5.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   }
