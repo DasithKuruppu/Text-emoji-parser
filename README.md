@@ -9,7 +9,7 @@
 
 ## Installation
 
-#### npm i text-emoji-parser --save
+`npm i text-emoji-parser --save`
 
 ## Basic Usage
 
