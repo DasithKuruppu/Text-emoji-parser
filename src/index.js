@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {MultiLineParser} from './parser.js';
 import { Emoji } from 'emoji-mart'
 
-const title = 'My Minimal React Webpack :santa::skin-tone-3: we :smiley: Babel Setup \n wowwwwww \n cool';
+const title = 'Some text :santa::skin-tone-3: with:smiley: xD \n new line \n some more text on new line';
 
 let ParsedNode=MultiLineParser(title,{SplitLinesTag:'p',Rule:/(?:\:[^\:]+\:(?:\:skin-tone-(?:\d)\:)?)/gi},(Rule,ruleNumber)=>{
   console.log(Rule)

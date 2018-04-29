@@ -21,7 +21,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {MultiLineParser} from 'text-emoji-parser';
 import { Emoji } from 'emoji-mart' // you can use this or any other emoji library i recommend this though 
-const title = 'My Minimal React Webpack :santa::skin-tone-3: we :smiley: Babel Setup \n wowwwwww \n cool';
+const title = 'Some text :santa::skin-tone-3: with:smiley: xD \n new line \n some more text on new line';
 
 let ParsedNode=MultiLineParser(title,
                                {
