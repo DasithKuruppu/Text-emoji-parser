@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {MultiLineParser} from './src/parser';
+import {MultiLineParser} from './parser.js';
 import { Emoji } from 'emoji-mart'
 
 const title = 'My Minimal React Webpack :santa::skin-tone-3: we :smiley: Babel Setup \n wowwwwww \n cool';
