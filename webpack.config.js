@@ -20,7 +20,9 @@ module.exports = {
   output: {
     path: __dirname + '/dist',
     publicPath: '/',
-    filename: "[name].compiled.js"
+    filename: "[name].compiled.js",
+    library: 'library',
+    libraryTarget: 'umd'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin()
