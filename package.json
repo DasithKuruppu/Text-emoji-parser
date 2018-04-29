@@ -1,6 +1,6 @@
 {
   "name": "text-emoji-parser",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Generic text parser for emoji of all kinds :) plug in your own emoji library to parse",
   "main": "./dist/lib.compiled.js",
   "scripts": {
