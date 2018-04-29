@@ -16,7 +16,7 @@
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {MultiLineParser} from './parser';
+import {MultiLineParser} from 'text-emoji-parser';
 import { Emoji } from 'emoji-mart' // you can use this or any other emoji library i recommend this though 
 const title = 'My Minimal React Webpack :santa::skin-tone-3: we :smiley: Babel Setup \n wowwwwww \n cool';
 
@@ -39,7 +39,7 @@ ReactDOM.render(
 ## API 
 #### SimpleParser
 ```javascript
-import {SimpleParser} from './parser';
+import {SimpleParser} from 'text-emoji-parser';
 ```
 * **Plaintext-required**: Plain text to parse
 * **Rule-required**: A regex that will match elements that you want to parse on the text (escape all capture groups)
@@ -47,7 +47,7 @@ import {SimpleParser} from './parser';
 
 #### MultiLineParser
 ```javascript
-import {MultiLineParser} from './parser';
+import {MultiLineParser} from 'text-emoji-parser';
 ```
 * **Plaintext-required**: Plain text to parse
 * **Options-required**: ```{SplitLinesTag:'p',Rule:/(?:\:[^\:]+\:(?:\:skin-tone-(?:\d)\:)?)/gi}```
