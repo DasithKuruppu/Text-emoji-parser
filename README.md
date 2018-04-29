@@ -11,6 +11,9 @@
 
 `npm i text-emoji-parser --save`
 
+## Demo (dist/index.html)
+ [Click Here for Demo](https://dasithkuruppu.github.io/Text-emoji-parser/dist/)
+
 ## Basic Usage
 
 ```javascript
