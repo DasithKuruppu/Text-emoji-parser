@@ -2,7 +2,7 @@
   "name": "text-emoji-parser",
   "version": "1.0.1",
   "description": "Generic text parser for emoji of all kinds :) plug in your own emoji library to parse",
-  "main": "./dist/lib.compiled.js",
+  "main": "./src/parser.js",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js --mode development",
     "test": "echo \"No test specified\" && exit 0"
