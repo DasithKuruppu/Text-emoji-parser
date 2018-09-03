@@ -20,7 +20,6 @@ const SimpleParser=(Plaintext,Rule,RenderNode)=>{
 const MultiLineParser = (Plaintext,{SplitLinesTag=null,Rule},RenderNode)=>{
     const SplitLineRule = /\n/gi
     const LineMatches=Plaintext.split(SplitLineRule);
-    console.log(Plaintext)
     let LineList=LineMatches.map((newLine,index)=>{
       return (<SplitLinesTag key={index}> {SimpleParser(newLine,Rule,RenderNode)} </SplitLinesTag>);
     });
