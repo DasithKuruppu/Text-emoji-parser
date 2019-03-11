@@ -28,9 +28,9 @@ let ParsedNode=MultiLineParser(title,
                                   SplitLinesTag:'p',
                                   Rule:/(?:\:[^\:]+\:(?:\:skin-tone-(?:\d)\:)?)/gi
                                 },
-                                (Rule,ruleNumber)=>{
+                                (EmojiTextMatchingRule,ruleNumber)=>{
                                         console.log(Rule)
-                                        return <Emoji emoji={Rule} size={48}/>
+                                        return <Emoji emoji={EmojiTextMatchingRule} size={48}/>
                                 });
 
 ReactDOM.render(
